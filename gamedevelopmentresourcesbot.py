@@ -1,6 +1,7 @@
 import logging
 import datetime
 import sqlite3
+import os
 from telegram import Update, ChatPermissions, ChatInviteLink
 from telegram.ext import (
     ApplicationBuilder, CommandHandler, MessageHandler,
@@ -12,7 +13,7 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackQueryHandler
 
 # --- CONFIGURATION ---
-TOKEN = '7702130558:AAE3fjdFbg8Tz9KOznVleYPR2jxAdJ4anMY'
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 ADMIN_ID = 6470227146  # Replace with your Telegram user ID
 PREMIUM_CHANNEL_ID = -1002856460300  # Replace with your channel ID
 DB_PATH = "telegram_premium_bot.db"
