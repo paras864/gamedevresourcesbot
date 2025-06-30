@@ -14,8 +14,8 @@ from telegram.ext import CallbackQueryHandler
 
 # --- CONFIGURATION ---
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-ADMIN_ID = 6470227146  # Replace with your Telegram user ID
-PREMIUM_CHANNEL_ID = -1002856460300  # Replace with your channel ID
+ADMIN_ID = os.getenv("ADMIN")  # Replace with your Telegram user ID
+PREMIUM_CHANNEL_ID = os.getenv("CHANNEL_ID")  # Replace with your channel ID
 DB_PATH = "telegram_premium_bot.db"
 
 pending_downloads = {}
