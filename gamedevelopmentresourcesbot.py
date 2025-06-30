@@ -11,6 +11,8 @@ import time
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
 from telegram.ext import CallbackQueryHandler
+from keep_alive import keep_alive
+keep_alive()  # This keeps the bot alive on Render
 
 # --- CONFIGURATION ---
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
